@@ -2,9 +2,6 @@
 import createAnswerApi from './axiosCreate';
 import { answerApiActions } from '@/store/ApiResponse/state';
 
-const systemPrompt = "You are a travel agent. Be descriptive and helpful";
-const userPrompt = "Tell me about San Francisco";
-
 export interface IResponseProps {
     choices: {
         finish_reason?: string;
@@ -14,15 +11,16 @@ export interface IResponseProps {
         };
     }[];
 }
-export const generateCompletion = async (dispatch: any): Promise<IResponseProps | null> => {
+
+interface IRequestProps {
+    dispatch: any
+    userPrompt: string
+}
+export const generateCompletion = async ({ dispatch, userPrompt }: IRequestProps): Promise<IResponseProps | null> => {
     try {
         const response = await createAnswerApi.post('/', {
             model: "gpt-4o",
             messages: [
-                {
-                    role: "system",
-                    content: systemPrompt,
-                },
                 {
                     role: "user",
                     content: userPrompt,

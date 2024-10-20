@@ -6,7 +6,9 @@ import ChatForm from "./components/chatForm/ChatForm";
 const Home = () => {
   return (
     <Provider store={store}>
-      <ChatForm />
+      <div className="bg-gray-100">
+        <ChatForm />
+      </div>
     </Provider>
   );
 };

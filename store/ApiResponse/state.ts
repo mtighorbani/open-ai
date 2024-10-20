@@ -1,4 +1,4 @@
-import { IResponseProps } from '@/app/api/open-ai';
+import { IResponseProps } from '@/api/open-ai';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 
@@ -12,7 +12,7 @@ export const answerApiSlice = createSlice({
     initialState,
     reducers: {
         answerResponse: (state, action: PayloadAction<IResponseProps>) => {
-            state.choices = action.payload.choices;
+            state.choices = [...state.choices, ...action.payload.choices];
         },
     },
 });
