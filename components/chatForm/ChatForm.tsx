@@ -1,5 +1,5 @@
 "use client";
-import { generateCompletion } from "@/app/api/open-ai";
+import { generateCompletion } from "@/api/open-ai";
 import answerResponseSelector from "@/store/ApiResponse/apiResponseSelector";
 import useAppDispatch from "@/store/storeUtils/useAppDipatch";
 import useAppSelector from "@/store/storeUtils/useAppSelector";

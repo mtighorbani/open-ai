@@ -1,4 +1,4 @@
-import { IResponseProps } from "@/app/api/open-ai";
+import { IResponseProps } from "@/api/open-ai";
 import { chatInputActions } from "@/store/inputText/state";
 import useAppDispatch from "@/store/storeUtils/useAppDipatch";
 import React from "react";

@@ -1,4 +1,4 @@
-import { IResponseProps } from '@/app/api/open-ai';
+import { IResponseProps } from '@/api/open-ai';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 
